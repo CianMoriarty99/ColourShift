@@ -29,7 +29,10 @@ public class HubBulletNorth : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D hitInfo)
     { 
-        //Debug.Log(hitInfo.name);
+        Debug.Log(hitInfo.gameObject.tag);
+        Debug.Log(this.tag);
+        if (hitInfo.gameObject.tag == this.tag)
         Destroy (gameObject);
+        Score.scoreInt += 1;
     }
 }
