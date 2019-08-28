@@ -30,6 +30,8 @@ public class Bullet : MonoBehaviour
         if (hitInfo.gameObject.tag == "Hub") {
         FindObjectOfType<GameManager>().EndGame();
         }
+        if (hitInfo.gameObject.tag != "Position"){
         Destroy (gameObject);
+        }
     }
 }

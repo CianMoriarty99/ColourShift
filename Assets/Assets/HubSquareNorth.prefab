@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1530869383481844284}
   - component: {fileID: 4642768700307087175}
   - component: {fileID: 3794795431939810301}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HubSquareNorth
   m_TagString: Square
   m_Icon: {fileID: 0}

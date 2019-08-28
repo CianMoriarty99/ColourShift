@@ -53,9 +53,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\GameManager.cs" />
      <Compile Include="Assets\Scripts\Blast.cs" />
      <Compile Include="Assets\Scripts\Bullet.cs" />
+     <Compile Include="Assets\Scripts\GameEnd.cs" />
+     <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\HubBulletNorth.cs" />
      <Compile Include="Assets\Scripts\HubBulletSE.cs" />
      <Compile Include="Assets\Scripts\HubBulletSW.cs" />

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3459721665549056860}
   - component: {fileID: 7468338122798745659}
   - component: {fileID: 896547377582504735}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HubBulletNorth
   m_TagString: Circle
   m_Icon: {fileID: 0}
