@@ -3,6 +3,7 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - Blast
     - Bullet
+    - GameEnd
     - GameManager
     - HubBulletNorth
     - HubBulletSE
@@ -11,6 +12,7 @@ ScriptsOnlyBuild:
     - MainMenu
     - PauseMenu
     - Player
+    - Score
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
@@ -32,6 +34,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
     - UnityEngine.UI.Slider
+    - UnityEngine.UI.Text
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -62,6 +65,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10926}
     - Class: 114
+      Script: {instanceID: 11094}
+    - Class: 114
       Script: {instanceID: 11136}
     - Class: 114
       Script: {instanceID: 11412}
@@ -80,23 +85,27 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11940}
     - Class: 114
-      Script: {instanceID: 12156}
+      Script: {instanceID: 12134}
     - Class: 114
-      Script: {instanceID: 12364}
+      Script: {instanceID: 12158}
+    - Class: 114
+      Script: {instanceID: 12216}
+    - Class: 114
+      Script: {instanceID: 12370}
     - Class: 114
       Script: {instanceID: 12432}
     - Class: 114
-      Script: {instanceID: 12524}
+      Script: {instanceID: 12440}
     - Class: 114
-      Script: {instanceID: 12728}
+      Script: {instanceID: 12532}
     - Class: 114
-      Script: {instanceID: 12784}
+      Script: {instanceID: 12736}
     - Class: 114
-      Script: {instanceID: 12832}
+      Script: {instanceID: 12792}
     - Class: 114
-      Script: {instanceID: 12868}
+      Script: {instanceID: 12840}
     - Class: 114
-      Script: {instanceID: 16352}
+      Script: {instanceID: 12876}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -145,25 +154,25 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11924}
     - Class: 114
-      Script: {instanceID: 12156}
+      Script: {instanceID: 12158}
     - Class: 114
-      Script: {instanceID: 12170}
+      Script: {instanceID: 12172}
     - Class: 114
-      Script: {instanceID: 12364}
+      Script: {instanceID: 12222}
+    - Class: 114
+      Script: {instanceID: 12370}
     - Class: 114
       Script: {instanceID: 12432}
     - Class: 114
-      Script: {instanceID: 12614}
+      Script: {instanceID: 12440}
     - Class: 114
-      Script: {instanceID: 12728}
+      Script: {instanceID: 12622}
     - Class: 114
-      Script: {instanceID: 12832}
+      Script: {instanceID: 12736}
     - Class: 114
-      Script: {instanceID: 12868}
+      Script: {instanceID: 12840}
     - Class: 114
-      Script: {instanceID: 15646}
-    - Class: 114
-      Script: {instanceID: 16352}
+      Script: {instanceID: 12876}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -535,6 +544,12 @@ ScriptsOnlyBuild:
     className: SignalReceiver
   - hash:
       serializedVersion: 2
+      Hash: 6eb71a270f0ef1e893ccb85d86d63946
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Score
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: TMPro
@@ -595,6 +610,18 @@ ScriptsOnlyBuild:
     className: TMP_TextSelector_A
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameEnd
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MainMenu
+  - hash:
+      serializedVersion: 2
       Hash: c1933cc0a2f4ff6eb13333347497beb3
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -641,6 +668,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: AudioTrack
+  - hash:
+      serializedVersion: 2
+      Hash: dda66dc057f5855a4e23c448fb1894b1
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PauseMenu
   - hash:
       serializedVersion: 2
       Hash: ae83e830e7a90c0aff918c4c2e520825
@@ -781,7 +814,7 @@ ScriptsOnlyBuild:
     className: Outline
   - hash:
       serializedVersion: 2
-      Hash: 1f04408f55440e55eab41c637342eec5
+      Hash: a8f50ac5abf6e5de54405ede1a592d82
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -845,20 +878,8 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: MainMenu
-  - hash:
-      serializedVersion: 2
-      Hash: dda66dc057f5855a4e23c448fb1894b1
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: PauseMenu
   platform: 5
   scenePathNames:
   - Assets/Scenes/MenuScene.unity
   - Assets/Scenes/GameScene.unity
-  playerPath: C:/Users/Cian/Documents/Shapeshift/Shapeshift.exe
+  playerPath: C:/Users/Cian/Documents/ShapeShiftEXE/Shapeshift.exe

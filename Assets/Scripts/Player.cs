@@ -25,13 +25,20 @@ public class Player : MonoBehaviour
     void Update()
     {
         if(playerPosition == 1)
-        transform.position = position1.transform.position;
+        {
+            transform.position = position1.transform.position;
+            transform.rotation = position1.transform.rotation;
+        }
 
-        if(playerPosition == 2)
-        transform.position = position2.transform.position;
+        if(playerPosition == 2){
+            transform.position = position2.transform.position;
+            transform.rotation = position2.transform.rotation;
+        }
 
-        if(playerPosition == 3)
-        transform.position = position3.transform.position;
+        if(playerPosition == 3){
+            transform.position = position3.transform.position;
+            transform.rotation = position3.transform.rotation;
+        }
 
         if(Input.GetKeyDown("left")) 
          if(playerPosition == 1) 

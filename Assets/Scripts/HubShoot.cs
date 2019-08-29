@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class HubShoot : MonoBehaviour
 {
 
@@ -41,7 +42,7 @@ public class HubShoot : MonoBehaviour
 
         //int range =  Random.Range(1,11);
         //if (range < )
-        shotCooldown = Random.Range(1.5f*levelDifficulty,2f*levelDifficulty);
+        shotCooldown = Random.Range(0.5f*levelDifficulty,1f*levelDifficulty);
         shotTimer = shotCooldown;
         }
 
@@ -58,6 +59,6 @@ public class HubShoot : MonoBehaviour
         else {
             Instantiate(hubSquarePrefab, firePoint.position, firePoint.rotation);
         }
-        levelDifficulty -= 0.4f;
+        levelDifficulty -= 0.1f;
     }
 }

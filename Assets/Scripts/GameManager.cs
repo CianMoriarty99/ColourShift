@@ -1,12 +1,14 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class GameManager : MonoBehaviour
 {
-    bool gameHasEnded = false;
+    public bool gameHasEnded = false;
 
     public GameObject loseScreen;
     public GameObject score;
+
     public float restartDelay = 3f;
     public void EndGame() {
 

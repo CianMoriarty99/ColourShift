@@ -34,7 +34,10 @@ public class HubBulletNorth : MonoBehaviour
         if (hitInfo.gameObject.tag == this.tag) 
         {
             Destroy (gameObject);
-            Score.scoreInt += 1;
+            if (FindObjectOfType<GameManager>().gameHasEnded == false) 
+            {
+                Score.scoreInt += 1;
+            }
         }
 
     }
