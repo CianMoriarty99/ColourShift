@@ -8,6 +8,7 @@ TagManager:
   - Square
   - Hub
   - Position
+  - Music
   layers:
   - Default
   - TransparentFX

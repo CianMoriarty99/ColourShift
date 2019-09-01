@@ -5,7 +5,8 @@ using UnityEngine;
 public class HubBulletNorth : MonoBehaviour
 {
 
-    public float speed = 1f;
+    public float speed = 0.5f;
+
     public Rigidbody2D rb;
     private Vector3 moveDir;
     private Vector3 pos;
@@ -18,7 +19,8 @@ public class HubBulletNorth : MonoBehaviour
          pos = new Vector3(0f,4f,0f);
  
         Vector3 moveDir = (pos - transform.position).normalized;
-        rb.velocity = moveDir * speed;
+        rb.velocity = moveDir * speed * (1 + Score.scoreInt/50f);
+        Debug.Log(rb.velocity);
     }
 
     // Update is called once per frame

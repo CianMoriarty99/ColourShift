@@ -8,12 +8,7 @@ public class Blast : MonoBehaviour {
     public GameObject bulletCirclePrefab;
     public GameObject bulletSquarePrefab;
 
-    public Sprite circleSprite;
-    public Sprite squareSprite;
-
     public Animator animator;
- 
-
 
     public bool blue;
 
@@ -22,7 +17,6 @@ public class Blast : MonoBehaviour {
     void Start()
     {
         blue = false;
-        this.GetComponent<SpriteRenderer>().sprite = circleSprite;
     }
 
     // Update is called once per frame
@@ -40,20 +34,11 @@ public class Blast : MonoBehaviour {
             blue = !blue; //Toggle
         }
 
-
-        // if (blue)
-        // {
-        //     this.GetComponent<SpriteRenderer>().sprite = circleSprite;
-        // }
-        // else 
-        // {
-        //     this.GetComponent<SpriteRenderer>().sprite = squareSprite;
-        // }
     }
 
     void Shoot()
     {
-        if (blue) {
+        if (!blue) {
         Instantiate(bulletCirclePrefab, firePoint.position, firePoint.rotation);
         }
         else {
