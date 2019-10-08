@@ -18,6 +18,10 @@ public class HubShoot : MonoBehaviour
     public float shotCooldown;
     public float shotTimer;
 
+
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,32 +30,35 @@ public class HubShoot : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        if (levelDifficulty < 2)
-            levelDifficulty = 2;
+        if (shotTimer <= 0 ) {
+            shotTimer = 10;
+            shotCooldown = Random.Range(0.7f,2f);
+            shotTimer = shotCooldown * levelDifficulty;
+            Fire();
+        }
 
-        if (shotTimer > 0)
+        if (levelDifficulty < 1.5f) {
+            levelDifficulty = 1.5f;
+        }
+
+
+        if (shotTimer > 0) {
             shotTimer -= Time.deltaTime;
 
-        if (shotTimer < 0)
-            shotTimer = 0;
-
-        if (shotTimer == 0) {
-            Fire();
-
-        //int range =  Random.Range(1,11);
-        //if (range < )
-        shotCooldown = Random.Range(0.5f*levelDifficulty,1f*levelDifficulty);
-        shotTimer = shotCooldown;
         }
+
+
 
 
 
     }
 
+
+
     void Fire()
-    {
+    {   
         decider = Random.Range(0f,2f);
         if (decider <= 1) {
             Instantiate(hubCirclePrefab, firePoint.position, firePoint.rotation);
@@ -59,6 +66,8 @@ public class HubShoot : MonoBehaviour
         else {
             Instantiate(hubSquarePrefab, firePoint.position, firePoint.rotation);
         }
-        levelDifficulty -= 0.1f;
+        levelDifficulty -= 0.15f;
+
     }
+
 }

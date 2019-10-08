@@ -31,7 +31,8 @@ public class HubBullet : MonoBehaviour
             pos = position3;
  
         Vector3 moveDir = (pos - transform.position).normalized;
-        rb.velocity = moveDir * speed;
+        rb.velocity = moveDir * speed * (1 + (Score.scoreInt/2));
+        Debug.Log(rb.velocity);
     }
 
     // Update is called once per frame

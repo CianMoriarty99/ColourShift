@@ -11,12 +11,14 @@ public class Blast : MonoBehaviour {
     public Animator animator;
 
     public bool blue;
+    public float coolOff;
 
 
     // Start is called before the first frame update
     void Start()
     {
         blue = false;
+        coolOff = 0;
     }
 
     // Update is called once per frame
@@ -24,8 +26,9 @@ public class Blast : MonoBehaviour {
     {
         animator.SetBool("Blue", blue);   
 
-        if (Input.GetKeyDown("up"))
+        if (Input.GetKeyDown("up") && coolOff == 0)
         {
+            coolOff = 0.1f;
             Shoot();
         }
 
@@ -33,6 +36,13 @@ public class Blast : MonoBehaviour {
         {
             blue = !blue; //Toggle
         }
+
+        if (coolOff > 0)
+            coolOff -= Time.deltaTime;
+
+
+        if (coolOff < 0) 
+            coolOff = 0;
 
     }
 

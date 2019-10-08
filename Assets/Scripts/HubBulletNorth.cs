@@ -16,11 +16,10 @@ public class HubBulletNorth : MonoBehaviour
     void Start()
     {
 
-         pos = new Vector3(0f,4f,0f);
+         pos = new Vector3(0f,5f,0f);
  
         Vector3 moveDir = (pos - transform.position).normalized;
-        rb.velocity = moveDir * speed * (1 + Score.scoreInt/50f);
-        Debug.Log(rb.velocity);
+        rb.velocity = moveDir * speed * (1 + Score.scoreInt/30f);
     }
 
     // Update is called once per frame
@@ -31,16 +30,19 @@ public class HubBulletNorth : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D hitInfo)
     { 
-        Debug.Log(hitInfo.gameObject.tag);
+        //Debug.Log(hitInfo.gameObject.name);
         //Debug.Log(this.tag);
-        if (hitInfo.gameObject.tag == this.tag) 
+        if (hitInfo.gameObject.tag == (this.tag) && hitInfo.gameObject.layer != (8) && FindObjectOfType<GameManager>().gameHasEnded == false) 
         {
+            Score.scoreInt += 1;
             Destroy (gameObject);
-            if (FindObjectOfType<GameManager>().gameHasEnded == false) 
-            {
-                Score.scoreInt += 1;
-            }
         }
+        else if (hitInfo.gameObject.tag != (this.tag))
+        {
+         Destroy (gameObject);
+         FindObjectOfType<GameManager>().EndGame();
+        }
+        
 
     }
 }

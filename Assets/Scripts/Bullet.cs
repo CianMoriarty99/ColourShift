@@ -30,10 +30,13 @@ public class Bullet : MonoBehaviour
     void OnTriggerEnter2D(Collider2D hitInfo)
     { 
         
-        if (hitInfo.gameObject.tag == "Hub") {
+        if (hitInfo.gameObject.tag == "Hub") 
+        {
         FindObjectOfType<GameManager>().EndGame();
         }
-        if (hitInfo.gameObject.tag != "Position"){
+        
+        if (hitInfo.gameObject.tag != "Position")
+        {
         explode = true;
         rb.velocity = moveDir * 0;
         GetComponent<CircleCollider2D> ().enabled = false;

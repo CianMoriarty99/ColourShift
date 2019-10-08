@@ -13,6 +13,8 @@ public class Audio : MonoBehaviour
     {
         musicSource.clip = musicClip;
         musicSource.Play();
+
+        Screen.SetResolution(1280, 720, false);
     }
 
     void Awake()

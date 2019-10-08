@@ -26,17 +26,17 @@ public class Player : MonoBehaviour
     {
         if(playerPosition == 1)
         {
-            transform.position = position1.transform.position;
+            transform.position = new Vector3(position1.transform.position.x, position1.transform.position.y, 0);
             transform.rotation = position1.transform.rotation;
         }
 
         if(playerPosition == 2){
-            transform.position = position2.transform.position;
+            transform.position = new Vector3(position2.transform.position.x, position2.transform.position.y, 0);
             transform.rotation = position2.transform.rotation;
         }
 
         if(playerPosition == 3){
-            transform.position = position3.transform.position;
+            transform.position = new Vector3(position3.transform.position.x, position3.transform.position.y, 0);
             transform.rotation = position3.transform.rotation;
         }
 
