@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a61b2b3ba12e5a34db9483dae684f53a
+guid: d7d4f391ef81f434aa9ec879fd2d1ffe
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -15,7 +15,7 @@ TextureImporter:
       213: 596975449725228887
     second: laser-bolts_3
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -69,6 +69,7 @@ TextureImporter:
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform

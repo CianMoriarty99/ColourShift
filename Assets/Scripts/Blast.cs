@@ -34,7 +34,7 @@ public class Blast : MonoBehaviour {
 
         if (Input.GetKeyDown("down"))
         {
-            blue = !blue; //Toggle
+            ChangeColour();
         }
 
         if (coolOff > 0)
@@ -46,7 +46,7 @@ public class Blast : MonoBehaviour {
 
     }
 
-    void Shoot()
+    public void Shoot()
     {
         if (!blue) {
         Instantiate(bulletCirclePrefab, firePoint.position, firePoint.rotation);
@@ -54,5 +54,10 @@ public class Blast : MonoBehaviour {
         else {
         Instantiate(bulletSquarePrefab, firePoint.position, firePoint.rotation);
         }
+    }
+
+    public void ChangeColour()
+    {   
+        blue = !blue; //Toggle
     }
 }

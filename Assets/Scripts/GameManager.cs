@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject loseScreen;
     public GameObject score;
+    public GameObject menuIcon;
 
     public float restartDelay = 3f;
     public void EndGame() {
@@ -16,6 +17,7 @@ public class GameManager : MonoBehaviour
         {
             gameHasEnded = true;
             //Debug.Log("GAME OVER");
+            menuIcon.SetActive(false);
             loseScreen.SetActive(true);   
             score.SetActive(false);
             Invoke("Restart", restartDelay);

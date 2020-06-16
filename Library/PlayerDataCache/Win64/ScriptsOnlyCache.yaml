@@ -20,6 +20,8 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
+    Unity.Rider.Editor.dll:
+    - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro.dll:
     - TMPro.TMP_ColorGradient
     - TMPro.TMP_FontAsset
@@ -36,6 +38,7 @@ ScriptsOnlyBuild:
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
+    - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -80,56 +83,56 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 13814}
+      Script: {instanceID: 11180}
     - Class: 114
-      Script: {instanceID: 13980}
+      Script: {instanceID: 11268}
     - Class: 114
-      Script: {instanceID: 14022}
+      Script: {instanceID: 11352}
     - Class: 114
-      Script: {instanceID: 14304}
+      Script: {instanceID: 11394}
     - Class: 114
-      Script: {instanceID: 14432}
+      Script: {instanceID: 11680}
     - Class: 114
-      Script: {instanceID: 14564}
+      Script: {instanceID: 11814}
     - Class: 114
-      Script: {instanceID: 14588}
+      Script: {instanceID: 11960}
     - Class: 114
-      Script: {instanceID: 14684}
+      Script: {instanceID: 11992}
     - Class: 114
-      Script: {instanceID: 14706}
+      Script: {instanceID: 12094}
     - Class: 114
-      Script: {instanceID: 14740}
+      Script: {instanceID: 12116}
     - Class: 114
-      Script: {instanceID: 14826}
+      Script: {instanceID: 12156}
     - Class: 114
-      Script: {instanceID: 14844}
+      Script: {instanceID: 12246}
     - Class: 114
-      Script: {instanceID: 15032}
+      Script: {instanceID: 12264}
     - Class: 114
-      Script: {instanceID: 15056}
+      Script: {instanceID: 12464}
     - Class: 114
-      Script: {instanceID: 15180}
+      Script: {instanceID: 12492}
     - Class: 114
-      Script: {instanceID: 15268}
+      Script: {instanceID: 12624}
     - Class: 114
-      Script: {instanceID: 15328}
+      Script: {instanceID: 12730}
     - Class: 114
-      Script: {instanceID: 15336}
+      Script: {instanceID: 12794}
     - Class: 114
-      Script: {instanceID: 15430}
+      Script: {instanceID: 12802}
     - Class: 114
-      Script: {instanceID: 15636}
+      Script: {instanceID: 12896}
     - Class: 114
-      Script: {instanceID: 15692}
+      Script: {instanceID: 13106}
     - Class: 114
-      Script: {instanceID: 15744}
-    - Class: 114
-      Script: {instanceID: 15778}
+      Script: {instanceID: 13216}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
       Script: {instanceID: 0}
     - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
       Script: {instanceID: 0}
     - Class: 212
       Script: {instanceID: 0}
@@ -167,44 +170,46 @@ ScriptsOnlyBuild:
     - Class: 109
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 13814}
+      Script: {instanceID: 11180}
     - Class: 114
-      Script: {instanceID: 14022}
+      Script: {instanceID: 11394}
     - Class: 114
-      Script: {instanceID: 14432}
+      Script: {instanceID: 11814}
     - Class: 114
-      Script: {instanceID: 14454}
+      Script: {instanceID: 11840}
     - Class: 114
-      Script: {instanceID: 14740}
+      Script: {instanceID: 12156}
     - Class: 114
-      Script: {instanceID: 14826}
+      Script: {instanceID: 12246}
     - Class: 114
-      Script: {instanceID: 15056}
+      Script: {instanceID: 12492}
     - Class: 114
-      Script: {instanceID: 15068}
+      Script: {instanceID: 12506}
     - Class: 114
-      Script: {instanceID: 15116}
+      Script: {instanceID: 12558}
     - Class: 114
-      Script: {instanceID: 15180}
+      Script: {instanceID: 12624}
     - Class: 114
-      Script: {instanceID: 15268}
+      Script: {instanceID: 12730}
     - Class: 114
-      Script: {instanceID: 15328}
+      Script: {instanceID: 12794}
     - Class: 114
-      Script: {instanceID: 15336}
+      Script: {instanceID: 12802}
     - Class: 114
-      Script: {instanceID: 15522}
+      Script: {instanceID: 12990}
     - Class: 114
-      Script: {instanceID: 15636}
+      Script: {instanceID: 13106}
     - Class: 114
-      Script: {instanceID: 15744}
+      Script: {instanceID: 13216}
     - Class: 114
-      Script: {instanceID: 15778}
+      Script: {instanceID: 13250}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
       Script: {instanceID: 0}
     - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
       Script: {instanceID: 0}
     - Class: 212
       Script: {instanceID: 0}
@@ -225,7 +230,7 @@ ScriptsOnlyBuild:
     className: CanvasScaler
   - hash:
       serializedVersion: 2
-      Hash: 3c08375166df118bd1801438fc36b92f
+      Hash: c42672c997f8be6b1aa86a927ebea785
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SelectionCaret
@@ -241,6 +246,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_Dropdown
+  - hash:
+      serializedVersion: 2
+      Hash: a8f50ac5abf6e5de54405ede1a592d82
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameManager
   - hash:
       serializedVersion: 2
       Hash: e7a73f5f78ba6445195ec23b74a1ce2d
@@ -261,7 +272,7 @@ ScriptsOnlyBuild:
     className: ActivationTrack
   - hash:
       serializedVersion: 2
-      Hash: 72712369a7c681ad84fc255a5ec0b333
+      Hash: aeb62f729c52c814dec86c47dcac1471
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Text
@@ -291,7 +302,7 @@ ScriptsOnlyBuild:
     className: TouchInputModule
   - hash:
       serializedVersion: 2
-      Hash: 8e0313c6f5e2ce35991fec2d64f8eaab
+      Hash: 89f9a1b4c64db9559e39f4a2e3bfaadd
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Image
@@ -357,7 +368,7 @@ ScriptsOnlyBuild:
     className: RectMask2D
   - hash:
       serializedVersion: 2
-      Hash: 4e9333594897a1fb8b136ad2eae996c7
+      Hash: d941ab6dd93d37ffdf2277f2ea2375a0
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SubMeshUI
@@ -543,7 +554,7 @@ ScriptsOnlyBuild:
     className: HubShoot
   - hash:
       serializedVersion: 2
-      Hash: feb9a5a121d15fa3654d4e50a5233045
+      Hash: f84d945e5e1ca985698660fc26e9657f
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: RawImage
@@ -693,7 +704,7 @@ ScriptsOnlyBuild:
     className: TMP_TextSelector_B
   - hash:
       serializedVersion: 2
-      Hash: 3b760e6526e13f7504f59e210145899a
+      Hash: 8001a5f7502aab37e42206da015e6914
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextMeshProUGUI
@@ -813,7 +824,7 @@ ScriptsOnlyBuild:
     className: TextMeshProFloatingText
   - hash:
       serializedVersion: 2
-      Hash: df434544c9f7b33d1cc7e635b180d279
+      Hash: 21d73eda81c18eacd2c91ad5dfaf2e32
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextMeshPro
@@ -861,12 +872,6 @@ ScriptsOnlyBuild:
     className: HubBullet
   - hash:
       serializedVersion: 2
-      Hash: a8f50ac5abf6e5de54405ede1a592d82
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: GameManager
-  - hash:
-      serializedVersion: 2
       Hash: a63fc1a3b035e5a0b5839cd7f7b3086e
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -885,7 +890,7 @@ ScriptsOnlyBuild:
     className: TestRunCallbackListener
   - hash:
       serializedVersion: 2
-      Hash: b4d278bcca1055fd3c9791d00a07fcfd
+      Hash: 4ef0f7d42cdb13479386e1f049c315aa
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner
     className: PlaymodeTestsController
@@ -935,4 +940,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/MenuScene.unity
   - Assets/Scenes/GameScene.unity
-  playerPath: C:/Users/Cian/Documents/ShapeShiftEXE/Shapeshift.exe
+  playerPath: C:/Users/Cian/Documents/ColourShiftEXE/Shapeshift.exe

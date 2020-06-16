@@ -7,6 +7,7 @@ public class PauseMenu : MonoBehaviour
 {
     public bool paused = false;
     public GameObject pauseMenu;
+    public GameObject menuIcon;
 
     public Scene mainMenu;
 
@@ -30,6 +31,7 @@ public class PauseMenu : MonoBehaviour
     public void Resume()
     {
         pauseMenu.SetActive(false);
+        menuIcon.SetActive(true);
         Time.timeScale = 1f;
         paused = false;
     }
@@ -37,6 +39,7 @@ public class PauseMenu : MonoBehaviour
     public void Pause() 
     {
         pauseMenu.SetActive(true);
+        menuIcon.SetActive(false);
         Time.timeScale = 0f;
         paused = true;
     }

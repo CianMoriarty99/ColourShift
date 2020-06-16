@@ -41,19 +41,30 @@ public class Player : MonoBehaviour
         }
 
         if(Input.GetKeyDown("left")) 
-         if(playerPosition == 1) 
-            playerPosition = 3;
-            else
-            playerPosition -=1;
+            CounterClockwise();
         
         if(Input.GetKeyDown("right")) 
-         if(playerPosition == 3) 
-            playerPosition = 1;
-            else
-            playerPosition +=1;
+            Clockwise();    
 
 
    
+    }
+
+    public void CounterClockwise()
+    {
+            if(playerPosition == 3) 
+                playerPosition = 1;
+            else
+                playerPosition +=1;
+    }
+
+    public void Clockwise() 
+    {
+        if(playerPosition == 1) 
+            playerPosition = 3;
+        else
+            playerPosition -=1;
+
     }
 
 
